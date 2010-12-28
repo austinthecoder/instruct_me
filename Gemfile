@@ -6,3 +6,7 @@ gem 'pg', '0.10.0'
 group :development do
   gem 'heroku'
 end
+
+group :development, :test do
+  gem 'cucumber-rails'
+end
