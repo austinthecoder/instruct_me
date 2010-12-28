@@ -1,6 +1,6 @@
 InstructMe::Application.routes.draw do
 
-  match 'debug' => lambda { |env| [200, {'Content-Type' => 'text/plain'}, Rails.env.to_s] }
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

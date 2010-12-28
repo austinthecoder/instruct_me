@@ -7,7 +7,8 @@ group :development do
   gem 'heroku'
 end
 
-group :development, :test do
+group :test do
+  gem 'capybara'
   gem 'rspec-rails'
   gem 'cucumber-rails'
 end
