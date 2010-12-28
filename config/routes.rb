@@ -1,4 +1,7 @@
 InstructMe::Application.routes.draw do
+
+  match 'debug' => lambda { |env| [200, {'Content-Type' => 'text/plain'}, env.inspect] }
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
