@@ -3,4 +3,5 @@
 .rvmrc
 config/database.yml
 log/*.log
+public/stylesheets/*
 tmp/**/*

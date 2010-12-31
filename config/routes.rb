@@ -1,6 +1,8 @@
 InstructMe::Application.routes.draw do
 
+  root :to => "instructions#new"
 
+  resources :instructions, :only => %w(new)
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
