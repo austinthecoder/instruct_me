@@ -1,1 +1,11 @@
-show
+.instructions
+  %h2= @instruction.title
+
+  %ul.steps
+    - @instruction.steps.each do |step|
+      %li.step{:class => "step_#{step.position}"}
+        %h5= step.description
+        %ul.commands
+          - step.commands.each do |command|
+            %li.command{:class => "command_#{command.position}"}
+              %code= command.body

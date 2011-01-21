@@ -1,5 +1,12 @@
 Feature: Creating Instructions
 
+  Scenario: Validations
+    When I go to the home page
+    And I press "Save and view instructions"
+    Then I should see "can't be blank" within ".title"
+
+
+
   @javascript
   Scenario: Simple
     When I go to the home page
@@ -21,6 +28,6 @@ Feature: Creating Instructions
       apt-get update
       apt-get -y install build-essential
       apt-get -y install curl wget
-      Do Nothing
+      Do nothing
       ls
       """
