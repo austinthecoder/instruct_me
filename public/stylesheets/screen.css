@@ -1,0 +1,341 @@
+/* line 14, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 17, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 19, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../usr/local/rvm/gems/ruby-1.9.2-p136@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 27, ../../app/stylesheets/screen.scss */
+button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  background: white;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(4%, #ffffff), color-stop(100%, #dddddd));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 4%, #dddddd 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #ffffff 4%, #dddddd 100%);
+  border: 1px solid #aaaaaa;
+  -webkit-box-sizing: border-box;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+/* line 43, ../../app/stylesheets/screen.scss */
+button:active {
+  background: #919191;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #919191), color-stop(4%, #b7b7b7), color-stop(100%, #cbcbcb));
+  background-image: -moz-linear-gradient(top, #919191 0%, #b7b7b7 4%, #cbcbcb 100%);
+  background-image: linear-gradient(top, #919191 0%, #b7b7b7 4%, #cbcbcb 100%);
+}
+/* line 48, ../../app/stylesheets/screen.scss */
+button img {
+  vertical-align: middle;
+}
+
+/* line 54, ../../app/stylesheets/screen.scss */
+.input label {
+  display: block;
+}
+
+/* line 58, ../../app/stylesheets/screen.scss */
+label {
+  font-weight: bold;
+}
+
+/* line 64, ../../app/stylesheets/screen.scss */
+input,
+textarea,
+select {
+  color: inherit;
+  font: inherit;
+}
+
+/* line 71, ../../app/stylesheets/screen.scss */
+input[type=text],
+input[type=password],
+textarea {
+  background: white url("/images/text_field_bg.gif") repeat-x left top;
+  border: 1px solid #c3c3c3;
+  border-top-color: #7c7c7c;
+  border-bottom-color: #ddd;
+  padding: 3px;
+}
+
+/* line 79, ../../app/stylesheets/screen.scss */
+.input {
+  margin: 0 0 10px 0;
+}
+
+/* line 87, ../../app/stylesheets/screen.scss */
+* {
+  line-height: 1.5em;
+}
+
+/* line 89, ../../app/stylesheets/screen.scss */
+body {
+  background: #fff;
+  font: 13px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 96, ../../app/stylesheets/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5em 0;
+}
+
+/* line 97, ../../app/stylesheets/screen.scss */
+h1 {
+  font-size: 2.4em;
+}
+
+/* line 98, ../../app/stylesheets/screen.scss */
+h2 {
+  font-size: 1.9em;
+}
+
+/* line 99, ../../app/stylesheets/screen.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 100, ../../app/stylesheets/screen.scss */
+h4 {
+  font-size: 1.2em;
+}
+
+/* line 101, ../../app/stylesheets/screen.scss */
+h5 {
+  font-size: 1em;
+}
+
+/* line 102, ../../app/stylesheets/screen.scss */
+h6 {
+  font-size: 0.9em;
+}
+
+/* line 104, ../../app/stylesheets/screen.scss */
+p {
+  margin: 0 0 1.5em 0;
+}
+
+/* line 111, ../../app/stylesheets/screen.scss */
+#header {
+  background: #333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
+  background-image: -moz-linear-gradient(top, #333333 0%, #666666 300px);
+  background-image: linear-gradient(top, #333333 0%, #666666 300px);
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  padding: 20px;
+}
+/* line 114, ../../app/stylesheets/screen.scss */
+#header h1 {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 122, ../../app/stylesheets/screen.scss */
+#content {
+  background: #333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
+  background-image: -moz-linear-gradient(top, #333333 0%, #666666 300px);
+  background-image: linear-gradient(top, #333333 0%, #666666 300px);
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* line 131, ../../app/stylesheets/screen.scss */
+.clear {
+  clear: both;
+}
+
+/* line 136, ../../app/stylesheets/screen.scss */
+form.instruction textarea {
+  width: 100%;
+}
+/* line 140, ../../app/stylesheets/screen.scss */
+form.instruction .input.description {
+  padding: 0 8px 0 0;
+}
+/* line 144, ../../app/stylesheets/screen.scss */
+form.instruction .title {
+  background: #ddd;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
+  background-image: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+  background-image: linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: black 0px 2px 5px 0;
+  -webkit-box-shadow: black 0px 2px 5px 0;
+  -o-box-shadow: black 0px 2px 5px 0;
+  box-shadow: black 0px 2px 5px 0;
+  color: #333;
+}
+/* line 148, ../../app/stylesheets/screen.scss */
+form.instruction .title .input {
+  padding: 20px;
+  margin: 0 8px 20px 0;
+}
+/* line 153, ../../app/stylesheets/screen.scss */
+form.instruction .title input {
+  width: 100%;
+}
+/* line 156, ../../app/stylesheets/screen.scss */
+form.instruction .add_step {
+  float: right;
+  margin: 0 0 10px 0;
+}
+/* line 158, ../../app/stylesheets/screen.scss */
+form.instruction .steps {
+  margin: 0 0 20px 0;
+}
+/* line 162, ../../app/stylesheets/screen.scss */
+form.instruction .steps_title {
+  float: left;
+  padding: 0 10px;
+}
+/* line 167, ../../app/stylesheets/screen.scss */
+form.instruction .steps_body {
+  background: #ddd;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
+  background-image: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+  background-image: linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: black 0px 2px 5px 0;
+  -webkit-box-shadow: black 0px 2px 5px 0;
+  -o-box-shadow: black 0px 2px 5px 0;
+  box-shadow: black 0px 2px 5px 0;
+  color: #333;
+}
+/* line 171, ../../app/stylesheets/screen.scss */
+form.instruction .step {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #bbb;
+  color: #333;
+  padding: 20px;
+  position: relative;
+}
+/* line 178, ../../app/stylesheets/screen.scss */
+form.instruction .step .remove_step {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+/* line 184, ../../app/stylesheets/screen.scss */
+form.instruction .step.first {
+  border-top: none;
+}
+/* line 185, ../../app/stylesheets/screen.scss */
+form.instruction .step.last {
+  border-bottom: none;
+}
+/* line 187, ../../app/stylesheets/screen.scss */
+form.instruction .commands {
+  margin: 10px 0 0 0;
+}
+/* line 189, ../../app/stylesheets/screen.scss */
+form.instruction .commands input {
+  width: 73%;
+}
+/* line 192, ../../app/stylesheets/screen.scss */
+form.instruction .commands .add_command button {
+  vertical-align: baseline;
+}
+/* line 194, ../../app/stylesheets/screen.scss */
+form.instruction .command {
+  margin: 0 0 5px 0;
+  padding: 0 10px 0 0;
+}
+/* line 198, ../../app/stylesheets/screen.scss */
+form.instruction .command input, form.instruction .command .remove_command {
+  float: left;
+}
+/* line 199, ../../app/stylesheets/screen.scss */
+form.instruction .command input {
+  display: block;
+  margin: 0 10px 0 0;
+}
+/* line 203, ../../app/stylesheets/screen.scss */
+form.instruction .command .remove_command {
+  display: block;
+}
+/* line 207, ../../app/stylesheets/screen.scss */
+form.instruction .form_footer button {
+  font-size: 14px;
+}
