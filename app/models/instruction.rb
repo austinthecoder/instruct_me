@@ -11,14 +11,17 @@ class Instruction < ActiveRecord::Base
   accepts_nested_attributes_for :steps, :allow_destroy => true
 
   ### callbacks ###
-  after_initialize { steps.build if steps.empty? }
+  after_initialize do
+    steps.build if steps.empty?
+    steps.build if @add_step
+  end
 
   def add_step
     false
   end
 
   def add_step=(val)
-    steps.build if val == '1'
+    @add_step = true if val == '1'
   end
 
 end

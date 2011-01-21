@@ -1,4 +1,5 @@
 Then /^I should see:$/ do |string|
-  pending
-  # steps %{Then I should see "#{string}"}
+  string.strip.split("\n").compact.each do |line|
+    steps %{Then I should see "#{line}"}
+  end
 end

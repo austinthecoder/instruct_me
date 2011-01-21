@@ -2,7 +2,7 @@ InstructMe::Application.routes.draw do
 
   root :to => "instructions#new"
 
-  resources :instructions, :only => %w(new create)
+  resources :instructions, :only => %w(new create show)
 
   resource :session, :only => [] do
     resource :instruction_attributes, :only => :update
