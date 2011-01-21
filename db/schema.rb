@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101231045644) do
+ActiveRecord::Schema.define(:version => 20110102033702) do
+
+  create_table "commands", :force => true do |t|
+    t.integer  "step_id"
+    t.text     "body"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "commands", ["step_id"], :name => "index_commands_on_step_id"
 
   create_table "instructions", :force => true do |t|
     t.string   "title"

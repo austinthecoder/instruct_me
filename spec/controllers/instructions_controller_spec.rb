@@ -8,11 +8,24 @@ describe InstructionsController do
     describe "GET new" do
       before do
         @i = Instruction.new
+        @s = @i.steps.build
+
         Instruction.stub!(:new => @i)
+        @i.steps.stub!(:build => @s)
       end
 
       it "builds an instruction" do
         Instruction.should_receive(:new).with(no_args)
+        get :new
+      end
+
+      it "builds a step for the instruction" do
+        @i.steps.should_receive(:build)
+        get :new
+      end
+
+      it "builds a command for the step" do
+        @s.commands.should_receive(:build)
         get :new
       end
 

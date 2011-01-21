@@ -1,2 +1,30 @@
-%form
-  %label Title
+= simple_form_for @instruction, :url => session_instruction_attributes_path, :html => {:method => :put} do |f|
+  %h2 Create Instructions
+  .title
+    = f.input :title
+  .steps
+    %h3.steps_title Steps
+    .add_step= f.input :add_step, :as => :boolean, :label => 'add step'
+    .clear
+    .steps_body
+      = f.simple_fields_for :steps do |s_f|
+        - first_step = (@instruction.steps[0] == s_f.object)
+        - last_step = (@instruction.steps[-1] == s_f.object)
+        - step_css_classes = []
+        - step_css_classes << "last" if last_step
+        - step_css_classes << "first" if first_step
+        .step{:class => step_css_classes.join(' ')}
+          - unless first_step
+            .remove_step= s_f.input :_destroy, :as => :boolean, :label => 'remove'
+          = s_f.input :description, :wrapper_html => {:class => 'description'}, :input_html => {:rows => 2, :cols => 60}, :label => ("Step #{s_f.object_name.gsub(/[^\d]/, '').to_i + 1}")
+          .commands
+            %label Commands
+            = s_f.simple_fields_for :commands do |c_f|
+              .command{:class => ("last" if s_f.object.commands[-1] == c_f.object)}
+                = c_f.text_field :body
+                - if s_f.object.commands[0] != c_f.object
+                  %span.remove_command= c_f.input :_destroy, :as => :boolean, :label => 'remove'
+                .clear
+            .add_command= s_f.input :add_command, :as => :boolean, :label => 'add'
+  .form_footer
+    %button{:type => 'submit'} Save and view instructions

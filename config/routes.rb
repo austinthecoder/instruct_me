@@ -2,7 +2,11 @@ InstructMe::Application.routes.draw do
 
   root :to => "instructions#new"
 
-  resources :instructions, :only => %w(new)
+  resources :instructions, :only => %w(new create)
+
+  resource :session, :only => [] do
+    resource :instruction_attributes, :only => :update
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

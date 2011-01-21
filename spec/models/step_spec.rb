@@ -19,4 +19,24 @@ describe Step do
     end
   end
 
+  describe "assocations" do
+    describe "#commands" do
+      it "are empty when it has none" do
+        @s.commands.should be_empty
+      end
+
+      context "with some commands" do
+        before do
+          @commands = (1..3).map { Factory(:command, :step => @s) }
+          @commands[0].move_to_bottom
+          @commands.each(&:reload)
+        end
+
+        it "returns them in order" do
+          @s.commands.should eq([@commands[1], @commands[2], @commands[0]])
+        end
+      end
+    end
+  end
+
 end

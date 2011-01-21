@@ -1,21 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.3'
-gem 'pg', '~> 0.10.0'
-gem 'haml', '~> 3.0.25'
-gem 'compass', '~> 0.10.6'
-gem 'simple_form', '~> 1.3.0'
-gem 'attribute_normalizer', '~> 0.3.1'
-gem 'acts_as_list', '~> 0.1.2'
-
-group :development do
-  gem 'heroku'
-end
+gem 'rails', '3.0.3'
+gem 'pg', '0.10.0'
+gem 'haml', '3.0.25'
+gem 'compass', '0.10.6'
+gem 'simple_form', '1.3.0'
+gem 'attribute_normalizer', '0.3.1'
+gem 'acts_as_list', '0.1.2'
+gem 'jquery-rails', '0.2.6'
 
 group :test do
-  gem 'capybara'
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
-  gem 'autotest'
-  gem 'factory_girl_rails', '>= 1.1.beta1'
+  gem 'capybara', '0.4.0'
+  gem 'rspec-rails', '2.3.1'
+  gem 'cucumber-rails', '0.3.2'
+  gem 'autotest', '4.4.6'
+  gem 'factory_girl_rails', '1.1.beta1'
 end
