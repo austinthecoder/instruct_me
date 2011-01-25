@@ -1,4 +1,5 @@
-@import "compass/reset";
+@import "reset";
+@import "base";
 @import "compass/css3";
 
 $images_path: "/images";
@@ -54,68 +55,26 @@ button {
   }
 }
 
-code {
-  font-family: monospace;
-}
-
-.input {
-  label {
-    display: block;
+form {
+  .input {
+    label { display: block; }
   }
-}
-label {
-  font-weight: bold;
-}
+  label { font-weight: bold; }
 
-input,
-textarea,
-select {
-  color: inherit;
-  font: inherit;
-}
+  input[type=text],
+  input[type=password],
+  textarea {
+    background: #fff url($images_path + "/text_field_bg.gif") repeat-x left top;
+  }
 
-input[type=text],
-input[type=password],
-textarea {
-  background: #fff url($images_path + "/text_field_bg.gif") repeat-x left top;
-  border: 1px solid #c3c3c3;
-  border-top-color: #7c7c7c;
-  border-bottom-color: #ddd;
-  padding: 3px;
-}
-
-.input {
-  margin: 0 0 10px 0;
+  .input { margin: 0 0 10px 0; }
 }
 
 
 //////////////////////////////////////////////////
 // Misc. Elements
 
-* { line-height: 1.5em; }
-
-body {
-  background: #fff;
-  font: 13px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 { margin: 0 0 0.5em 0; }
-h1 { font-size: 2.4em; }
-h2 { font-size: 1.9em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; }
-h5 {
-  font-size: 1em;
-  font-weight: bold;
-}
-h6 {
-  font-size: 0.9em;
-  font-weight: bold;
-}
-
-p { margin: 0 0 1.5em 0; }
+//body { background: #fff; }
 
 
 
@@ -126,10 +85,8 @@ p { margin: 0 0 1.5em 0; }
   @include section();
 
   h1 {
-    font-size: 1.4em;
-    font-weight: bold;
     text-transform: uppercase;
-    margin: 0;
+    margin-bottom: 0;
   }
 }
 

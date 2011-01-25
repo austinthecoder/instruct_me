@@ -13,7 +13,9 @@
         - step_css_classes = []
         - step_css_classes << "last" if last_step
         - step_css_classes << "first" if first_step
+        
         .step{:class => step_css_classes.join(' ')}
+          
           - unless first_step
             .remove_step= s_f.input :_destroy, :as => :boolean, :label => 'remove'
           = s_f.input :description, :wrapper_html => {:class => 'description'}, :input_html => {:rows => 2, :cols => 60}, :label => ("Step #{s_f.object_name.gsub(/[^\d]/, '').to_i + 1}")
@@ -26,5 +28,6 @@
                   %span.remove_command= c_f.input :_destroy, :as => :boolean, :label => 'remove'
                 .clear
             .add_command= s_f.input :add_command, :as => :boolean, :label => 'add'
+            
   .form_footer
     %button{:type => 'submit', :name => 'save'} Save and view instructions

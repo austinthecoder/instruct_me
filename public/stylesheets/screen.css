@@ -1,64 +1,259 @@
-/* line 14, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b2 | 201101
+   NOTE: THIS IS A BETA VERSION (see previous line)
+   USE WITH CAUTION AND TEST WITH ABANDON */
+/* line 18, ../../app/stylesheets/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
+  font: inherit;
   vertical-align: baseline;
 }
 
-/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-body {
-  line-height: 1;
-  color: black;
-  background: white;
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../../app/stylesheets/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
-/* line 19, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 31, ../../app/stylesheets/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../../app/stylesheets/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 21, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 37, ../../app/stylesheets/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../../app/stylesheets/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../../app/stylesheets/_reset.scss */
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
-  vertical-align: middle;
 }
 
-/* line 23, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
+/* line 1, ../../app/stylesheets/_base.scss */
+body {
+  font-size: 13px;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+/* line 5, ../../app/stylesheets/_base.scss */
+body * {
+  line-height: 1.5em;
+}
+
+/* line 8, ../../app/stylesheets/_base.scss */
+address {
+  font-style: normal;
+}
+
+/* line 10, ../../app/stylesheets/_base.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* line 15, ../../app/stylesheets/_base.scss */
+blockquote {
+  padding: 20px 30px;
+}
+
+/* line 17, ../../app/stylesheets/_base.scss */
+caption {
+  margin-bottom: .5em;
   text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
 }
 
-/* line 25, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: "" "";
-}
-/* line 96, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
+/* line 22, ../../app/stylesheets/_base.scss */
+cite {
+  font-style: italic;
 }
 
-/* line 27, ../../../../.rvm/gems/ruby-1.9.2-p0@instruct_me/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+/* line 24, ../../app/stylesheets/_base.scss */
+code {
+  font-family: monospace;
 }
 
-/* line 31, ../../app/stylesheets/screen.scss */
+/* line 26, ../../app/stylesheets/_base.scss */
+dl {
+  margin: 0 0 1.5em 30px;
+}
+/* line 29, ../../app/stylesheets/_base.scss */
+dl dt {
+  font-weight: bold;
+}
+/* line 30, ../../app/stylesheets/_base.scss */
+dl dd {
+  margin-left: 20px;
+}
+
+/* line 33, ../../app/stylesheets/_base.scss */
+em {
+  font-style: italic;
+}
+
+/* line 35, ../../app/stylesheets/_base.scss */
+form {
+  line-height: 1.5em;
+}
+/* line 38, ../../app/stylesheets/_base.scss */
+form fieldset {
+  border: 1px solid #000;
+  margin: 0 0 0.5em 0;
+  padding: 10px;
+}
+/* line 43, ../../app/stylesheets/_base.scss */
+form fieldset legend {
+  padding: 0 5px;
+}
+/* line 46, ../../app/stylesheets/_base.scss */
+form input, form select, form textarea {
+  font-size: 13px;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+/* line 51, ../../app/stylesheets/_base.scss */
+form input[type=text], form input[type=password], form textarea {
+  background-color: #fff;
+  border: 1px solid #c3c3c3;
+  border-top-color: #7c7c7c;
+  border-bottom-color: #ddd;
+  padding: 3px;
+}
+/* line 59, ../../app/stylesheets/_base.scss */
+form textarea {
+  overflow: auto;
+}
+
+/* line 62, ../../app/stylesheets/_base.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 63, ../../app/stylesheets/_base.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 64, ../../app/stylesheets/_base.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 65, ../../app/stylesheets/_base.scss */
+h1, h2, h3 {
+  margin-bottom: .5em;
+}
+
+/* line 66, ../../app/stylesheets/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* line 68, ../../app/stylesheets/_base.scss */
+iframe {
+  border: 1px solid #000;
+}
+
+/* line 70, ../../app/stylesheets/_base.scss */
+kbd {
+  font-family: monospace;
+}
+
+/* line 72, ../../app/stylesheets/_base.scss */
+ol {
+  margin: 0 0 1.5em 30px;
+}
+/* line 75, ../../app/stylesheets/_base.scss */
+ol li {
+  list-style: decimal outside;
+}
+/* line 76, ../../app/stylesheets/_base.scss */
+ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+/* line 79, ../../app/stylesheets/_base.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 81, ../../app/stylesheets/_base.scss */
+pre {
+  margin-bottom: 1.5em;
+}
+
+/* line 83, ../../app/stylesheets/_base.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 86, ../../app/stylesheets/_base.scss */
+table td, table th {
+  border: 1px solid #000;
+  padding: 5px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+/* line 93, ../../app/stylesheets/_base.scss */
+table th {
+  font-weight: bold;
+}
+/* line 96, ../../app/stylesheets/_base.scss */
+table thead th {
+  vertical-align: bottom;
+}
+
+/* line 100, ../../app/stylesheets/_base.scss */
+tt {
+  font-family: monospace;
+}
+
+/* line 102, ../../app/stylesheets/_base.scss */
+ul {
+  margin: 0 0 1.5em 30px;
+}
+/* line 105, ../../app/stylesheets/_base.scss */
+ul li {
+  list-style: disc outside;
+}
+/* line 106, ../../app/stylesheets/_base.scss */
+ul ul, ul ol {
+  margin-bottom: 0;
+}
+
+/* line 109, ../../app/stylesheets/_base.scss */
+var {
+  font-family: monospace;
+}
+
+/* line 32, ../../app/stylesheets/screen.scss */
 button {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -81,113 +276,38 @@ button {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 47, ../../app/stylesheets/screen.scss */
+/* line 48, ../../app/stylesheets/screen.scss */
 button:active {
   background: #919191;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #919191), color-stop(4%, #b7b7b7), color-stop(100%, #cbcbcb));
   background-image: -moz-linear-gradient(top, #919191 0%, #b7b7b7 4%, #cbcbcb 100%);
   background-image: linear-gradient(top, #919191 0%, #b7b7b7 4%, #cbcbcb 100%);
 }
-/* line 52, ../../app/stylesheets/screen.scss */
+/* line 53, ../../app/stylesheets/screen.scss */
 button img {
   vertical-align: middle;
 }
 
-/* line 57, ../../app/stylesheets/screen.scss */
-code {
-  font-family: monospace;
-}
-
-/* line 62, ../../app/stylesheets/screen.scss */
-.input label {
+/* line 60, ../../app/stylesheets/screen.scss */
+form .input label {
   display: block;
 }
-
-/* line 66, ../../app/stylesheets/screen.scss */
-label {
+/* line 62, ../../app/stylesheets/screen.scss */
+form label {
   font-weight: bold;
 }
-
-/* line 72, ../../app/stylesheets/screen.scss */
-input,
-textarea,
-select {
-  color: inherit;
-  font: inherit;
-}
-
-/* line 79, ../../app/stylesheets/screen.scss */
-input[type=text],
-input[type=password],
-textarea {
+/* line 66, ../../app/stylesheets/screen.scss */
+form input[type=text],
+form input[type=password],
+form textarea {
   background: white url("/images/text_field_bg.gif") repeat-x left top;
-  border: 1px solid #c3c3c3;
-  border-top-color: #7c7c7c;
-  border-bottom-color: #ddd;
-  padding: 3px;
 }
-
-/* line 87, ../../app/stylesheets/screen.scss */
-.input {
+/* line 70, ../../app/stylesheets/screen.scss */
+form .input {
   margin: 0 0 10px 0;
 }
 
-/* line 95, ../../app/stylesheets/screen.scss */
-* {
-  line-height: 1.5em;
-}
-
-/* line 97, ../../app/stylesheets/screen.scss */
-body {
-  background: #fff;
-  font: 13px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
-/* line 104, ../../app/stylesheets/screen.scss */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.5em 0;
-}
-
-/* line 105, ../../app/stylesheets/screen.scss */
-h1 {
-  font-size: 2.4em;
-}
-
-/* line 106, ../../app/stylesheets/screen.scss */
-h2 {
-  font-size: 1.9em;
-}
-
-/* line 107, ../../app/stylesheets/screen.scss */
-h3 {
-  font-size: 1.5em;
-}
-
-/* line 108, ../../app/stylesheets/screen.scss */
-h4 {
-  font-size: 1.2em;
-}
-
-/* line 109, ../../app/stylesheets/screen.scss */
-h5 {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-/* line 113, ../../app/stylesheets/screen.scss */
-h6 {
-  font-size: 0.9em;
-  font-weight: bold;
-}
-
-/* line 118, ../../app/stylesheets/screen.scss */
-p {
-  margin: 0 0 1.5em 0;
-}
-
-/* line 125, ../../app/stylesheets/screen.scss */
+/* line 84, ../../app/stylesheets/screen.scss */
 #header {
   background: #333;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
@@ -198,15 +318,13 @@ p {
   color: #fff;
   padding: 20px;
 }
-/* line 128, ../../app/stylesheets/screen.scss */
+/* line 87, ../../app/stylesheets/screen.scss */
 #header h1 {
-  font-size: 1.4em;
-  font-weight: bold;
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: 0;
 }
 
-/* line 136, ../../app/stylesheets/screen.scss */
+/* line 93, ../../app/stylesheets/screen.scss */
 #content {
   background: #333;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
@@ -218,20 +336,20 @@ p {
   padding: 20px;
 }
 
-/* line 145, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 150, ../../app/stylesheets/screen.scss */
+/* line 107, ../../app/stylesheets/screen.scss */
 form.instruction textarea {
   width: 100%;
 }
-/* line 154, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 form.instruction .input.description {
   padding: 0 8px 0 0;
 }
-/* line 158, ../../app/stylesheets/screen.scss */
+/* line 115, ../../app/stylesheets/screen.scss */
 form.instruction .title {
   background: #ddd;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
@@ -249,34 +367,34 @@ form.instruction .title {
   box-shadow: black 0px 2px 5px 0;
   color: #333;
 }
-/* line 14, ../../app/stylesheets/screen.scss */
+/* line 15, ../../app/stylesheets/screen.scss */
 form.instruction .title button {
   border: 1px solid #aaaaaa;
 }
-/* line 161, ../../app/stylesheets/screen.scss */
+/* line 118, ../../app/stylesheets/screen.scss */
 form.instruction .title .input {
   padding: 20px;
   margin: 0 8px 20px 0;
 }
-/* line 166, ../../app/stylesheets/screen.scss */
+/* line 123, ../../app/stylesheets/screen.scss */
 form.instruction .title input {
   width: 100%;
 }
-/* line 169, ../../app/stylesheets/screen.scss */
+/* line 126, ../../app/stylesheets/screen.scss */
 form.instruction .add_step {
   float: right;
   margin: 0 0 10px 0;
 }
-/* line 171, ../../app/stylesheets/screen.scss */
+/* line 128, ../../app/stylesheets/screen.scss */
 form.instruction .steps {
   margin: 0 0 20px 0;
 }
-/* line 175, ../../app/stylesheets/screen.scss */
+/* line 132, ../../app/stylesheets/screen.scss */
 form.instruction .steps_title {
   float: left;
   padding: 0 10px;
 }
-/* line 180, ../../app/stylesheets/screen.scss */
+/* line 137, ../../app/stylesheets/screen.scss */
 form.instruction .steps_body {
   background: #ddd;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
@@ -294,11 +412,11 @@ form.instruction .steps_body {
   box-shadow: black 0px 2px 5px 0;
   color: #333;
 }
-/* line 14, ../../app/stylesheets/screen.scss */
+/* line 15, ../../app/stylesheets/screen.scss */
 form.instruction .steps_body button {
   border: 1px solid #aaaaaa;
 }
-/* line 184, ../../app/stylesheets/screen.scss */
+/* line 141, ../../app/stylesheets/screen.scss */
 form.instruction .step {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #bbb;
@@ -306,56 +424,56 @@ form.instruction .step {
   padding: 20px;
   position: relative;
 }
-/* line 191, ../../app/stylesheets/screen.scss */
+/* line 148, ../../app/stylesheets/screen.scss */
 form.instruction .step .remove_step {
   position: absolute;
   top: 5px;
   right: 5px;
 }
-/* line 197, ../../app/stylesheets/screen.scss */
+/* line 154, ../../app/stylesheets/screen.scss */
 form.instruction .step.first {
   border-top: none;
 }
-/* line 198, ../../app/stylesheets/screen.scss */
+/* line 155, ../../app/stylesheets/screen.scss */
 form.instruction .step.last {
   border-bottom: none;
 }
-/* line 200, ../../app/stylesheets/screen.scss */
+/* line 157, ../../app/stylesheets/screen.scss */
 form.instruction .commands {
   margin: 10px 0 0 0;
 }
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 159, ../../app/stylesheets/screen.scss */
 form.instruction .commands input {
   width: 73%;
 }
-/* line 205, ../../app/stylesheets/screen.scss */
+/* line 162, ../../app/stylesheets/screen.scss */
 form.instruction .commands .add_command button {
   vertical-align: baseline;
 }
-/* line 207, ../../app/stylesheets/screen.scss */
+/* line 164, ../../app/stylesheets/screen.scss */
 form.instruction .command {
   margin: 0 0 5px 0;
   padding: 0 10px 0 0;
 }
-/* line 211, ../../app/stylesheets/screen.scss */
+/* line 168, ../../app/stylesheets/screen.scss */
 form.instruction .command input, form.instruction .command .remove_command {
   float: left;
 }
-/* line 212, ../../app/stylesheets/screen.scss */
+/* line 169, ../../app/stylesheets/screen.scss */
 form.instruction .command input {
   display: block;
   margin: 0 10px 0 0;
 }
-/* line 216, ../../app/stylesheets/screen.scss */
+/* line 173, ../../app/stylesheets/screen.scss */
 form.instruction .command .remove_command {
   display: block;
 }
-/* line 220, ../../app/stylesheets/screen.scss */
+/* line 177, ../../app/stylesheets/screen.scss */
 form.instruction .form_footer button {
   font-size: 14px;
 }
 
-/* line 226, ../../app/stylesheets/screen.scss */
+/* line 183, ../../app/stylesheets/screen.scss */
 .instructions {
   background: #ddd;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
@@ -374,15 +492,15 @@ form.instruction .form_footer button {
   color: #333;
   padding: 20px;
 }
-/* line 14, ../../app/stylesheets/screen.scss */
+/* line 15, ../../app/stylesheets/screen.scss */
 .instructions button {
   border: 1px solid #aaaaaa;
 }
-/* line 235, ../../app/stylesheets/screen.scss */
+/* line 192, ../../app/stylesheets/screen.scss */
 .instructions .step {
   margin-bottom: 20px;
 }
-/* line 239, ../../app/stylesheets/screen.scss */
+/* line 196, ../../app/stylesheets/screen.scss */
 .instructions .commands {
   padding-left: 20px;
 }
