@@ -3,17 +3,17 @@
 @import "compass/css3";
 
 $images_path: "/images";
-$base_color: #ddd;
+$button_base_color: #ddd;
+$link_color: #33f;
 
 @mixin box() {
-  background: #ddd;
-  @include linear-gradient(color-stops(#eee, #ddd 300px));
+  background: #eee;
   @include border-radius(10px);
   @include box-shadow(#000, 0px, 2px);
   color: #333;
 
   button {
-    border: 1px solid darken($base_color, 20%);
+    border: 1px solid darken($button_base_color, 20%);
   }
 }
 
@@ -23,7 +23,9 @@ $base_color: #ddd;
   border-top: 1px solid #444;
   border-bottom: 1px solid #333;
   color: #fff;
-  padding: 20px;
+  padding: 20px 3%;
+
+  a { color: lighten($link_color, 30%); }
 }
 
 //////////////////////////////////////////////////
@@ -31,8 +33,8 @@ $base_color: #ddd;
 
 button {
   @include border-radius(5px);
-  background: lighten($base_color, 30%);
-  @include linear-gradient(color-stops(lighten($base_color, 30%), lighten($base_color, 15%) 4%, $base_color));
+  background: lighten($button_base_color, 30%);
+  @include linear-gradient(color-stops(lighten($button_base_color, 30%), lighten($button_base_color, 15%) 4%, $button_base_color));
 
   border: none;
   -webkit-box-sizing: border-box;
@@ -46,8 +48,8 @@ button {
   vertical-align: middle;
 
   &:active {
-    background: darken($base_color, 30%);
-    @include linear-gradient(color-stops(darken($base_color, 30%), darken($base_color, 15%) 4%, darken($base_color, 7%)));
+    background: darken($button_base_color, 30%);
+    @include linear-gradient(color-stops(darken($button_base_color, 30%), darken($button_base_color, 15%) 4%, darken($button_base_color, 7%)));
   }
 
   img {
@@ -66,8 +68,6 @@ form {
   textarea {
     background: #fff url($images_path + "/text_field_bg.gif") repeat-x left top;
   }
-
-  .input { margin: 0 0 10px 0; }
 }
 
 
@@ -76,13 +76,16 @@ form {
 
 //body { background: #fff; }
 
+a { color: $link_color; }
 
 
 //////////////////////////////////////////////////
 // Layout
 
 #header {
-  @include section();
+  background: #eee;
+  color: #333;
+  padding: 10px 3%;
 
   h1 {
     text-transform: uppercase;
@@ -92,6 +95,19 @@ form {
 
 #content {
   @include section();
+}
+
+#footer {
+  @include section();
+
+  .col1 {
+    float: left;
+    width: 50%;
+  }
+  .col2 {
+    float: right;
+    width: 50%;
+  }
 }
 
 
@@ -104,74 +120,71 @@ form {
 }
 
 form.instruction {
-  textarea {
-    width: 100%;
-  }
+  textarea, input[type=text] { width: 100%; }
 
-  .input.description {
-    padding: 0 8px 0 0;
-  }
+  .input { padding: 0 8px 0 0; }
 
   .title {
     @include box();
-
-    .input {
-      padding: 20px;
-      margin: 0 8px 20px 0;
-    }
-
-    input { width: 100%; }
+    margin-bottom: 20px;
+    padding: 20px;
   }
 
-  .add_step { float: right; margin: 0 0 10px 0; }
-
-  .steps {
-    margin: 0 0 20px 0;
-  }
-
-  .steps_title {
-    float: left;
-    padding: 0 10px;
-  }
-
-  .steps_body {
-    @include box();
-  }
+  .steps { margin: 0 0 20px 0; }
 
   .step {
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #bbb;
+    @include box();
+    //background: #eee;
+
     color: #333;
-    padding: 20px;
-    position: relative;
+    margin: 0 0 10px 0;
 
-    .remove_step {
-      position: absolute;
-      top: 5px;
-      right: 5px;
+    .step_header {
+      @include border-top-radius(10px);
+      background: #ddd;
+      border-bottom: 1px solid #bbb;
+      padding: 10px 10px 10px 20px;
+
+      h2, h3, h4 {
+        color: #555;
+        float: left;
+        line-height: 1.2em;
+        margin-bottom: 0;
+      }
+
+      .remove_step { float: right; }
+    }
+
+    .step_body {
+      border-top: 1px solid #fff;
+      padding: 10px 20px 20px 20px;
+    }
+
+    .commands {
+      margin: 10px 0 0 0;
+
+      .add_command { button { vertical-align: baseline; } }
+
+      .command {
+        margin-bottom: 5px;
+        position: relative;
+
+        .input {
+          margin: 0 74px 0 0;
+          padding: 0 10px 0 0;
+          position: relative;
+        }
+
+        .remove_command {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
     }
   }
-  .step.first { border-top: none; }
-  .step.last { border-bottom: none; }
 
-  .commands {
-    margin: 10px 0 0 0;
-    input {
-      width: 73%;
-    }
-    .add_command { button { vertical-align: baseline; } }
-  }
-  .command {
-    margin: 0 0 5px 0;
-    padding: 0 10px 0 0;
-
-    input, .remove_command { float: left; }
-    input {
-      display: block;
-      margin: 0 10px 0 0;
-    }
-    .remove_command { display: block; }
-  }
 
   .form_footer {
     button {

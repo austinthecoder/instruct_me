@@ -20,6 +20,8 @@ describe Step do
   end
 
   describe "assocations" do
+    before { @s.save! }
+
     describe "#commands" do
       it "are empty when it has none" do
         @s.commands.should be_empty
@@ -33,7 +35,7 @@ describe Step do
         end
 
         it "returns them in order" do
-          @s.commands.should eq([@commands[1], @commands[2], @commands[0]])
+          @s.commands.reload.should eq([@commands[1], @commands[2], @commands[0]])
         end
       end
     end

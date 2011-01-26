@@ -3,31 +3,31 @@
   .title
     = f.input :title
   .steps
-    %h3.steps_title Steps
-    .add_step= f.input :add_step, :as => :boolean, :label => 'add step'
-    .clear
-    .steps_body
-      = f.simple_fields_for :steps do |s_f|
-        - first_step = (@instruction.steps[0] == s_f.object)
-        - last_step = (@instruction.steps[-1] == s_f.object)
-        - step_css_classes = []
-        - step_css_classes << "last" if last_step
-        - step_css_classes << "first" if first_step
-        
-        .step{:class => step_css_classes.join(' ')}
-          
-          - unless first_step
+    - step_nbr = 0
+    - nbr_of_steps = @instruction.steps.size
+    = f.simple_fields_for :steps do |s_f|
+      - step_nbr += 1
+      %div{:class => css_class_string_for_listable('step', step_nbr, nbr_of_steps)}
+        .step_header
+          %h3= "Step #{step_nbr}"
+          - if nbr_of_steps > 1
             .remove_step= s_f.input :_destroy, :as => :boolean, :label => 'remove'
-          = s_f.input :description, :wrapper_html => {:class => 'description'}, :input_html => {:rows => 2, :cols => 60}, :label => ("Step #{s_f.object_name.gsub(/[^\d]/, '').to_i + 1}")
+          .clear
+        .step_body
+          = s_f.input :description, :wrapper_html => {:class => 'description'}, :input_html => {:rows => 2, :cols => 60}
+          
           .commands
             %label Commands
+            - cmd_nbr = 0
+            - nbr_of_cmds = s_f.object.commands.size
             = s_f.simple_fields_for :commands do |c_f|
-              .command{:class => ("last" if s_f.object.commands[-1] == c_f.object)}
-                = c_f.text_field :body
-                - if s_f.object.commands[0] != c_f.object
+              - cmd_nbr += 1
+              %div{:class => css_class_string_for_listable('command', cmd_nbr, nbr_of_cmds)}
+                = c_f.input :body, :as => 'string', :label => false
+                - if nbr_of_cmds > 1
                   %span.remove_command= c_f.input :_destroy, :as => :boolean, :label => 'remove'
-                .clear
             .add_command= s_f.input :add_command, :as => :boolean, :label => 'add'
-            
+          
+    .add_step= f.input :add_step, :as => :boolean, :label => 'add step'
   .form_footer
     %button{:type => 'submit', :name => 'save'} Save and view instructions

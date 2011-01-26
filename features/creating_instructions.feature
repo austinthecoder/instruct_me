@@ -11,15 +11,19 @@ Feature: Creating Instructions
   Scenario: Simple
     When I go to the home page
     And I fill in "Title" with "Installing A Ruby 1.8 Stack on Ubuntu 8.10"
-    And I fill in "Step 1" with "Install the system level basics"
-    And I fill in "Command 1" with "apt-get update" within Step 1
-    And I press "add" within Step 1
-    And I fill in "Command 2" with "apt-get -y install build-essential" within Step 1
-    And I press "add" within Step 1
-    And I fill in "Command 3" with "apt-get -y install curl wget" within Step 1
+    And I am scoped to step 1
+    And I fill in "Description" with "Install the system level basics"
+    And I fill in command 1 with "apt-get update"
+    And I press "add"
+    And I fill in command 2 with "apt-get -y install build-essential"
+    And I press "add"
+    And I fill in command 3 with "apt-get -y install curl wget"
+    And I am scoped to the page
     And I press "add step"
-    And I fill in "Step 2" with "Do nothing"
-    And I fill in "Command 1" with "ls" within Step 2
+    And I am scoped to step 2
+    And I fill in "Description" with "Do nothing"
+    And I fill in command 1 with "ls"
+    And I am scoped to the page
     And I press "Save and view instructions"
     Then I should see:
       """

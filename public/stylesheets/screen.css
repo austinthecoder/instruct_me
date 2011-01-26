@@ -253,7 +253,7 @@ var {
   font-family: monospace;
 }
 
-/* line 32, ../../app/stylesheets/screen.scss */
+/* line 34, ../../app/stylesheets/screen.scss */
 button {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -276,55 +276,51 @@ button {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 48, ../../app/stylesheets/screen.scss */
+/* line 50, ../../app/stylesheets/screen.scss */
 button:active {
   background: #919191;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #919191), color-stop(4%, #b7b7b7), color-stop(100%, #cbcbcb));
   background-image: -moz-linear-gradient(top, #919191 0%, #b7b7b7 4%, #cbcbcb 100%);
   background-image: linear-gradient(top, #919191 0%, #b7b7b7 4%, #cbcbcb 100%);
 }
-/* line 53, ../../app/stylesheets/screen.scss */
+/* line 55, ../../app/stylesheets/screen.scss */
 button img {
   vertical-align: middle;
 }
 
-/* line 60, ../../app/stylesheets/screen.scss */
+/* line 62, ../../app/stylesheets/screen.scss */
 form .input label {
   display: block;
 }
-/* line 62, ../../app/stylesheets/screen.scss */
+/* line 64, ../../app/stylesheets/screen.scss */
 form label {
   font-weight: bold;
 }
-/* line 66, ../../app/stylesheets/screen.scss */
+/* line 68, ../../app/stylesheets/screen.scss */
 form input[type=text],
 form input[type=password],
 form textarea {
   background: white url("/images/text_field_bg.gif") repeat-x left top;
 }
-/* line 70, ../../app/stylesheets/screen.scss */
-form .input {
-  margin: 0 0 10px 0;
+
+/* line 79, ../../app/stylesheets/screen.scss */
+a {
+  color: #3333ff;
 }
 
-/* line 84, ../../app/stylesheets/screen.scss */
+/* line 85, ../../app/stylesheets/screen.scss */
 #header {
-  background: #333;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
-  background-image: -moz-linear-gradient(top, #333333 0%, #666666 300px);
-  background-image: linear-gradient(top, #333333 0%, #666666 300px);
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #333;
-  color: #fff;
-  padding: 20px;
+  background: #eee;
+  color: #333;
+  padding: 10px 3%;
 }
-/* line 87, ../../app/stylesheets/screen.scss */
+/* line 90, ../../app/stylesheets/screen.scss */
 #header h1 {
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
-/* line 93, ../../app/stylesheets/screen.scss */
+/* line 96, ../../app/stylesheets/screen.scss */
 #content {
   background: #333;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
@@ -333,28 +329,55 @@ form .input {
   border-top: 1px solid #444;
   border-bottom: 1px solid #333;
   color: #fff;
-  padding: 20px;
+  padding: 20px 3%;
+}
+/* line 28, ../../app/stylesheets/screen.scss */
+#content a {
+  color: #ccccff;
 }
 
-/* line 102, ../../app/stylesheets/screen.scss */
+/* line 100, ../../app/stylesheets/screen.scss */
+#footer {
+  background: #333;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #333333), color-stop(100%, #666666));
+  background-image: -moz-linear-gradient(top, #333333 0%, #666666 300px);
+  background-image: linear-gradient(top, #333333 0%, #666666 300px);
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  padding: 20px 3%;
+}
+/* line 28, ../../app/stylesheets/screen.scss */
+#footer a {
+  color: #ccccff;
+}
+/* line 103, ../../app/stylesheets/screen.scss */
+#footer .col1 {
+  float: left;
+  width: 50%;
+}
+/* line 107, ../../app/stylesheets/screen.scss */
+#footer .col2 {
+  float: right;
+  width: 50%;
+}
+
+/* line 118, ../../app/stylesheets/screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 107, ../../app/stylesheets/screen.scss */
-form.instruction textarea {
+/* line 123, ../../app/stylesheets/screen.scss */
+form.instruction textarea, form.instruction input[type=text] {
   width: 100%;
 }
-/* line 111, ../../app/stylesheets/screen.scss */
-form.instruction .input.description {
+/* line 125, ../../app/stylesheets/screen.scss */
+form.instruction .input {
   padding: 0 8px 0 0;
 }
-/* line 115, ../../app/stylesheets/screen.scss */
+/* line 127, ../../app/stylesheets/screen.scss */
 form.instruction .title {
-  background: #ddd;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
-  background-image: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 300px);
-  background-image: linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+  background: #eee;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -o-border-radius: 10px;
@@ -366,40 +389,20 @@ form.instruction .title {
   -o-box-shadow: black 0px 2px 5px 0;
   box-shadow: black 0px 2px 5px 0;
   color: #333;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 /* line 15, ../../app/stylesheets/screen.scss */
 form.instruction .title button {
   border: 1px solid #aaaaaa;
 }
-/* line 118, ../../app/stylesheets/screen.scss */
-form.instruction .title .input {
-  padding: 20px;
-  margin: 0 8px 20px 0;
-}
-/* line 123, ../../app/stylesheets/screen.scss */
-form.instruction .title input {
-  width: 100%;
-}
-/* line 126, ../../app/stylesheets/screen.scss */
-form.instruction .add_step {
-  float: right;
-  margin: 0 0 10px 0;
-}
-/* line 128, ../../app/stylesheets/screen.scss */
+/* line 133, ../../app/stylesheets/screen.scss */
 form.instruction .steps {
   margin: 0 0 20px 0;
 }
-/* line 132, ../../app/stylesheets/screen.scss */
-form.instruction .steps_title {
-  float: left;
-  padding: 0 10px;
-}
-/* line 137, ../../app/stylesheets/screen.scss */
-form.instruction .steps_body {
-  background: #ddd;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
-  background-image: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 300px);
-  background-image: linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+/* line 135, ../../app/stylesheets/screen.scss */
+form.instruction .step {
+  background: #eee;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -o-border-radius: 10px;
@@ -411,74 +414,81 @@ form.instruction .steps_body {
   -o-box-shadow: black 0px 2px 5px 0;
   box-shadow: black 0px 2px 5px 0;
   color: #333;
+  color: #333;
+  margin: 0 0 10px 0;
 }
 /* line 15, ../../app/stylesheets/screen.scss */
-form.instruction .steps_body button {
+form.instruction .step button {
   border: 1px solid #aaaaaa;
 }
-/* line 141, ../../app/stylesheets/screen.scss */
-form.instruction .step {
-  border-top: 1px solid #fff;
+/* line 142, ../../app/stylesheets/screen.scss */
+form.instruction .step .step_header {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #ddd;
   border-bottom: 1px solid #bbb;
-  color: #333;
-  padding: 20px;
-  position: relative;
+  padding: 10px 10px 10px 20px;
 }
 /* line 148, ../../app/stylesheets/screen.scss */
-form.instruction .step .remove_step {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-/* line 154, ../../app/stylesheets/screen.scss */
-form.instruction .step.first {
-  border-top: none;
+form.instruction .step .step_header h2, form.instruction .step .step_header h3, form.instruction .step .step_header h4 {
+  color: #555;
+  float: left;
+  line-height: 1.2em;
+  margin-bottom: 0;
 }
 /* line 155, ../../app/stylesheets/screen.scss */
-form.instruction .step.last {
-  border-bottom: none;
+form.instruction .step .step_header .remove_step {
+  float: right;
 }
-/* line 157, ../../app/stylesheets/screen.scss */
-form.instruction .commands {
+/* line 158, ../../app/stylesheets/screen.scss */
+form.instruction .step .step_body {
+  border-top: 1px solid #fff;
+  padding: 10px 20px 20px 20px;
+}
+/* line 163, ../../app/stylesheets/screen.scss */
+form.instruction .step .commands {
   margin: 10px 0 0 0;
 }
-/* line 159, ../../app/stylesheets/screen.scss */
-form.instruction .commands input {
-  width: 73%;
-}
-/* line 162, ../../app/stylesheets/screen.scss */
-form.instruction .commands .add_command button {
+/* line 166, ../../app/stylesheets/screen.scss */
+form.instruction .step .commands .add_command button {
   vertical-align: baseline;
 }
-/* line 164, ../../app/stylesheets/screen.scss */
-form.instruction .command {
-  margin: 0 0 5px 0;
-  padding: 0 10px 0 0;
-}
 /* line 168, ../../app/stylesheets/screen.scss */
-form.instruction .command input, form.instruction .command .remove_command {
-  float: left;
+form.instruction .step .commands .command {
+  margin-bottom: 5px;
+  position: relative;
 }
-/* line 169, ../../app/stylesheets/screen.scss */
-form.instruction .command input {
+/* line 172, ../../app/stylesheets/screen.scss */
+form.instruction .step .commands .command .input {
+  margin: 0 74px 0 0;
+  padding: 0 10px 0 0;
+  position: relative;
+}
+/* line 178, ../../app/stylesheets/screen.scss */
+form.instruction .step .commands .command .remove_command {
   display: block;
-  margin: 0 10px 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-/* line 173, ../../app/stylesheets/screen.scss */
-form.instruction .command .remove_command {
-  display: block;
-}
-/* line 177, ../../app/stylesheets/screen.scss */
+/* line 190, ../../app/stylesheets/screen.scss */
 form.instruction .form_footer button {
   font-size: 14px;
 }
 
-/* line 183, ../../app/stylesheets/screen.scss */
+/* line 196, ../../app/stylesheets/screen.scss */
 .instructions {
-  background: #ddd;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
-  background-image: -moz-linear-gradient(top, #eeeeee 0%, #dddddd 300px);
-  background-image: linear-gradient(top, #eeeeee 0%, #dddddd 300px);
+  background: #eee;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -o-border-radius: 10px;
@@ -496,11 +506,11 @@ form.instruction .form_footer button {
 .instructions button {
   border: 1px solid #aaaaaa;
 }
-/* line 192, ../../app/stylesheets/screen.scss */
+/* line 205, ../../app/stylesheets/screen.scss */
 .instructions .step {
   margin-bottom: 20px;
 }
-/* line 196, ../../app/stylesheets/screen.scss */
+/* line 209, ../../app/stylesheets/screen.scss */
 .instructions .commands {
   padding-left: 20px;
 }
