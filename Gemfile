@@ -8,6 +8,7 @@ gem 'simple_form', '1.3.0'
 gem 'attribute_normalizer', '0.3.1'
 gem 'acts_as_list', '0.1.2'
 gem 'jquery-rails', '0.2.6'
+gem 'dalli', '1.0.1'
 
 group :test do
   gem 'capybara', '0.4.0'
