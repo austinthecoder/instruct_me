@@ -1,5 +1,6 @@
 .instructions
   %h2= @instruction.title
+  %p= link_to "Edit these instructions", edit_instruction_path(@instruction)
 
   %ul.steps
     - @instruction.steps.each do |step|

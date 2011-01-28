@@ -52,3 +52,14 @@ Feature: Creating Instructions
     And I am scoped to step 2
     And I fill in "Description" with "Clean up the house"
     And I fill in command 1 with "start cleaning the bathroom"
+    And I am scoped to the page
+    And I press "Save and view instructions"
+    And I follow "Edit these instructions"
+    Then the "Title" field should contain "How to do stuff"
+    And I am scoped to step 1
+    And the "Description" field should contain "Get off your butt"
+    And the command 1 field should contain "get off the couch"
+    And the command 2 field should contain "walk around"
+    And I am scoped to step 2
+    And the "Description" field should contain "Clean up the house"
+    And the command 1 field should contain "start cleaning the bathroom"

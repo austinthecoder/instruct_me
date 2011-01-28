@@ -1,0 +1,36 @@
+= simple_form_for @instruction do |f|
+  %h2 Create Instructions
+  .title
+    = f.input :title
+  .steps
+    - step_nbr = 0
+    - nbr_of_steps = @instruction.steps.size
+    = f.simple_fields_for :steps do |s_f|
+      - step_nbr += 1
+      %div{:class => css_class_string_for_listable('step', step_nbr, nbr_of_steps)}
+        .step_header
+          %h3= "Step #{step_nbr}"
+          - if nbr_of_steps > 1
+            .remove_step= s_f.input :_destroy, :as => :boolean, :label => 'remove'
+          .clear
+        .step_body
+          = s_f.input :description, :wrapper_html => {:class => 'description'}, :input_html => {:rows => 2, :cols => 60}
+          
+          .commands
+            %label Commands
+            - cmd_nbr = 0
+            - nbr_of_cmds = s_f.object.commands.size
+            = s_f.simple_fields_for :commands do |c_f|
+              - cmd_nbr += 1
+              %div{:class => css_class_string_for_listable('command', cmd_nbr, nbr_of_cmds)}
+                = c_f.input :body, :as => 'string', :label => false
+                - if nbr_of_cmds > 1
+                  %span.remove_command= c_f.input :_destroy, :as => :boolean, :label => 'remove'
+            .add_command= s_f.input :add_command, :as => :boolean, :label => 'add'
+          
+    .add_step= f.input :add_step, :as => :boolean, :label => 'add step'
+  .form_footer
+    - if @instruction.new_record?
+      %button{:type => 'submit', :name => 'save'} Save and view instructions
+    - else
+      %button{:type => 'submit', :name => 'view'} View instructions
